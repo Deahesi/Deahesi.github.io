@@ -11,6 +11,7 @@ let chars = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N
 
 radiobutton1.addEventListener('change', toggleSetts);
 radiobutton2.addEventListener('change', toggleSetts);
+
 button.addEventListener('click', (e) => {
     if (radiobutton1.checked) {
         out.innerHTML = generationNoSetts();
