@@ -1,0 +1,137 @@
+body {
+    font-family: 'Roboto Mono', monospace;
+    box-sizing: border-box;
+}
+.wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Header */
+.header {
+    background-color: #5D8AA8;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 270px 0 270px 0;
+    color: #E6E6FA;
+    -webkit-border-radius: 270px 0 270px 0;
+    -moz-border-radius: 270px 0 270px 0;
+    -ms-border-radius: 270px 0 270px 0;
+    -o-border-radius: 270px 0 270px 0;
+}
+
+.header h1 {
+    font-weight: 500;
+    padding: 0 20px;
+    cursor: default;
+    text-decoration: none;
+    transition: .2s linear;
+    -webkit-transition: .2s linear;
+    -moz-transition: .2s linear;
+    -ms-transition: .2s linear;
+    -o-transition: .2s linear;
+}
+
+h1:hover {
+    border-left: 3px #E6E6FA solid;
+    border-right: 3px #E6E6FA solid;
+    border-radius: 40px;
+    -webkit-border-radius: 40px;
+    -moz-border-radius: 40px;
+    -ms-border-radius: 40px;
+    -o-border-radius: 40px;
+}
+
+/* Main Generator */
+.content {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.content__out {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    max-height: 150px;
+    margin: 10px 0;
+    background-color: #E6E6FA;
+    border-radius: 30px; 
+    font-weight: 600;
+    font-size: 50px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+}
+
+.settings {
+    position: absolute;
+    background-color: #E6E6FA;
+    width: 100%;
+    height: 100vh;
+    max-width: 350px;
+    max-height: 200px;
+    right: 32%;
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+}
+
+.show {
+    display: block;
+}
+
+.hide {
+    display: none;
+}
+
+.settings-inner {
+    margin-left: 15px;
+}
+
+.sumbit-gener {
+    margin-top: 10px;
+    font-weight: 700;
+    color: white;
+    text-decoration: none;
+    padding: .8em 1em calc(.8em + 3px);
+    border-radius: 3px;
+    background: #5D8AA8;
+    box-shadow: 0 -3px rgb(42, 140, 153) inset;
+    transition: 0.2s;
+}
+.sumbit-gener:hover { background: rgb(35, 136, 184); }
+.sumbit-gener:active {
+    background: rgb(10, 111, 151);
+    box-shadow: 0 3px rgb(10,111,151) inset;
+}
+
+@media (max-width: 1400px) {
+    .content__out {
+        font-size: 25px;
+    }
+    @media (max-width: 700px) {
+        .content__out {
+            font-size: 15px;
+            width: 250px;
+        }
+        .settings {
+            position: relative;
+            margin: 0 auto;
+        }
+    }
+}
+
+@media (max-width: 750px) {
+    .header {
+        font-size: 10px;
+    }
+}

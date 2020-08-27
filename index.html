@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Генератор паролей</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="wrap">
+        <header class="header">
+            <h1>Генератор паролей</h1>
+        </header>
+        <div class="content">
+            <a href="#" class="sumbit-gener">Сгенерировать пароль</a>
+            <div class="content__out">Тут пока пусто :/</div>
+            <div class="content-settings">
+
+                <input type="radio" class="radio__input" name="content-settings__radio" id="radio__nosetts"
+                    value="no-settings" checked>
+                <label class="radio__label" for="radio__nosetts">Без настроек</label>
+
+                <input type="radio" class="radio__input" name="content-settings__radio" id="radio__with-setts"
+                    value="with-settings">
+                <label class="radio__label" for="radio__with-setts">Задать настройки</label>
+
+                <div class="settings hide">
+                    <div class="settings-inner">
+                        <p>Кол-во символов</p>
+
+                        <input type="radio" class="radio__input" name="content-settings__radio-count" id="radio__5-10"
+                            value="5-10" checked>
+                        <label class="radio__label" for="radio__5-10">5-10</label>
+
+                        <input type="radio" class="radio__input" name="content-settings__radio-count" id="radio__11-15"
+                            value="11-15">
+                        <label class="radio__label" for="radio__11-15">11-15</label>
+
+                        <input type="radio" class="radio__input" name="content-settings__radio-count" id="radio__16-20"
+                            value="16-20">
+                        <label class="radio__label" for="radio__16-20">16-20</label>
+
+                        <input type="radio" class="radio__input" name="content-settings__radio-count" id="radio__21-26"
+                            value="21-26">
+                        <label class="radio__label" for="radio__21-26">21-26</label>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="Script.js"></script>
+</body>
+
+</html>
