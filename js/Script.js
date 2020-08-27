@@ -1,6 +1,7 @@
 let radiobutton1 = document.querySelector('#radio__nosetts');
 let radiobutton2 = document.querySelector('#radio__with-setts');
 let radio_length = document.getElementsByName('content-settings__radio-count');
+let radio_case = document.getElementsByName('content-settings__radio-case');
 let button = document.querySelector('.sumbit-gener');
 let settings = document.querySelector('.settings');
 let out = document.querySelector('.content__out');
@@ -31,6 +32,7 @@ function toggleSetts() {
 function generationWithSetts() {
     interval = [];
     let pass = '';
+
     for (let radio of radio_length) {
         if (radio.checked) {
             interval = radio.value.split('-');
@@ -43,8 +45,21 @@ function generationWithSetts() {
         let rand = Math.floor(0 + Math.random() * (1 + 1 - 0));
         let randChar = Math.floor(0 + Math.random() * (chars.length - 1 + 1 - 0));
         let randNum = Math.floor(0 + Math.random() * (9 + 1 - 0));
+        let randCase = Math.floor(0 + Math.random() * (1 + 1 - 0));
         if (rand == 0) {
-            pass += chars[randChar];
+            if (radio_case[0].checked && i < 1) {
+                pass += chars[randChar].toUpperCase();
+                continue;
+            } else if (radio_case[1].checked && i < 1) {
+                pass += chars[randChar].toLowerCase();
+                continue;
+            }
+            if (randCase == 0) {
+                pass += chars[randChar].toUpperCase();
+            } else {
+                pass += chars[randChar].toLowerCase();
+            }
+
         } else {
             pass += randNum;
         }
@@ -64,8 +79,13 @@ function generationNoSetts() {
         let rand = Math.floor(0 + Math.random() * (1 + 1 - 0));
         let randChar = Math.floor(0 + Math.random() * (chars.length - 1 + 1 - 0));
         let randNum = Math.floor(0 + Math.random() * (9 + 1 - 0));
+        let randCase = Math.floor(0 + Math.random() * (1 + 1 - 0));
         if (rand == 0) {
-            pass += chars[randChar];
+            if (randCase == 0) {
+                pass += chars[randChar].toUpperCase();
+            } else {
+                pass += chars[randChar].toLowerCase();
+            }
         } else {
             pass += randNum;
         }
