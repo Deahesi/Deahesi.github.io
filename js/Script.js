@@ -2,6 +2,7 @@ let radiobutton1 = document.querySelector('#radio__nosetts');
 let radiobutton2 = document.querySelector('#radio__with-setts');
 let radio_length = document.getElementsByName('content-settings__radio-count');
 let radio_case = document.getElementsByName('content-settings__radio-case');
+let radio_char = document.getElementsByName('content-settings__radio-char');
 let button = document.querySelector('.sumbit-gener');
 let settings = document.querySelector('.settings');
 let out = document.querySelector('.content__out');
@@ -12,6 +13,7 @@ let chars = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N
 
 radiobutton1.addEventListener('change', toggleSetts);
 radiobutton2.addEventListener('change', toggleSetts);
+
 
 button.addEventListener('click', (e) => {
     if (radiobutton1.checked) {
@@ -46,6 +48,9 @@ function generationWithSetts() {
         let randChar = Math.floor(0 + Math.random() * (chars.length - 1 + 1 - 0));
         let randNum = Math.floor(0 + Math.random() * (9 + 1 - 0));
         let randCase = Math.floor(0 + Math.random() * (1 + 1 - 0));
+
+        if (radio_char[0].checked && i < 1) { rand = 0 } else if (radio_char[1].checked && i < 1) { rand = 1 }
+
         if (rand == 0) {
             if (radio_case[0].checked && i < 1) {
                 pass += chars[randChar].toUpperCase();
