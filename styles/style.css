@@ -71,6 +71,14 @@ h1:hover {
     -o-border-radius: 30px;
 }
 
+.radio__block {
+    display: flex;
+}
+
+#radio__with-setts {
+    margin-left: 20px;
+}
+
 .settings {
     position: absolute;
     background-color: #E6E6FA;
@@ -125,8 +133,9 @@ h1:hover {
             width: 250px;
         }
         .settings {
-            position: relative;
+            position: static;
             margin: 0 auto;
+            width: 400px;
         }
     }
 }
